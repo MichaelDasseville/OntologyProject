@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#"
+     xml:base="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adopt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adopt">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adoptedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adoptedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adoptedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedCat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedDog"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedOther"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#belongTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#belongTo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#own"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedCat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedDog"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedOther"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#care -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#care">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isCaredBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#host -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#host">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#hostedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#hostedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#hostedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedCat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedDog"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedOther"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isCaredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isCaredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedCat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedDog"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedOther"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#own -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#own">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#pay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#pay">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedCat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedCat">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Cats"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adoptedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#hostedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedDog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedDog">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Dogs"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adoptedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#hostedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedOther -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#AdoptedOther">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adoptedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#hostedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Adopter">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#adopt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Cats -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Cats">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Dogs"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Dogs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Dogs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#FreeGuardian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#FreeGuardian">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedCat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedCat">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Cats"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#belongTo"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedDog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedDog">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Dogs"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#belongTo"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedOther -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#GuardedOther">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#belongTo"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#own"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#PayedGuardian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#PayedGuardian">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#host"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#care"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
