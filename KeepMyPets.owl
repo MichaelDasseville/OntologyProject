@@ -103,7 +103,7 @@
     <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian"/>
     </owl:ObjectProperty>
     
 
@@ -130,7 +130,7 @@
     <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#PayedGuardian"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
     </owl:ObjectProperty>
@@ -261,31 +261,11 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
     </owl:Class>
     
 
@@ -303,7 +283,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -325,7 +305,7 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -347,11 +327,31 @@
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#isKeep"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Human"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#keep"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Pets"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Shelter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Veterinary"/>
     </owl:Class>
     
 
@@ -399,7 +399,7 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Gardian"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Guardian"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#payedBy"/>
                         <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/michael/ontologies/2019/9/KeepMyPets#Owner"/>
